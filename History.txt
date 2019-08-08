@@ -1,0 +1,31 @@
+    1  apt-get update ; apt-get install git -y 
+    2  git --version
+    3  which  git 
+    4  ls
+    5  mkdir my_git_projects
+    6  ls
+    7  cd my_git_projects/
+    8  ls
+    9  git clone https://github.com/amitvashist7/devops-niit-20190808.git
+   10  ls
+   11  cd devops-niit-20190808/
+   12  ls
+   13  cat README.md 
+   14  vi README.md 
+   15  echo "Hello World" > Hello_World.txt
+   16  ls -ltr 
+   17  git add .
+   18  git status 
+   19  git log 
+   20  git commit -m "Added Hello World"
+   21  git config --global --edit
+   22  vi /root/.gitconfig
+   23  git log 
+   24  git push 
+   25  git log 
+   26  git push 
+   27  ls
+   28  history 
+   29  ls
+   30  history 
+   31  history > History.txt
