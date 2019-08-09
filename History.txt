@@ -29,3 +29,52 @@
    29  ls
    30  history 
    31  history > History.txt
+   32  git add . ; git commit -m "History"; git push origin master 
+   33  exit
+   34  pwd
+   35  ls
+   36  cd my_git_projects/
+   37  ls
+   38  cd devops-niit-20190808/
+   39  ls
+   40  git log 
+   41  ls
+   42  echo "Apple Pie" | git hash-object 
+   43  echo "Apple Pie" | git hash-object --stdin 
+   44  echo "Amit Vashist" | git hash-object --stdin 
+   45  echo "Apple Pie" | git hash-object --stdin 
+   46  echo "Apple Pie" | git hash-object --stdin -w
+   47  echo "Amit Vashist" | git hash-object --stdin -w
+   48  ls
+   49  ls -a
+   50  ls
+   51  cd .git/
+   52  ls -ltr 
+   53  cd objects/
+   54  ls
+   55  echo "Amit Vashist" | git hash-object --stdin -w
+   56  echo "Apple Pie" | git hash-object --stdin -w
+   57  ls
+   58  cd c4/
+   59  ls
+   60  cd ..
+   61  git cat-file c4/2fe628543c9f330ea51dea312d32cd72d7f454 -t 
+   62  git cat-file c42fe628543c9f330ea51dea312d32cd72d7f454 -t 
+   63  git cat-file c42fe628543c9f330ea51dea312d32cd72d7f454 -p
+   64  git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -p
+   65  cd ..
+   66  ls
+   67  cd ..
+   68  ls
+   69  git log 
+   70  git HEAD
+   71  ls
+   72  cd .git/
+   73  ls
+   74  file HEAD   
+   75  cat HEAD 
+   76  cat refs/heads/master
+   77  git log
+   78  cd ..
+   79  ls
+   80  history > History.txt 
