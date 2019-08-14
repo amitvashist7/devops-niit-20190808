@@ -471,87 +471,35 @@
   471  docker rm d91f3a8926c2       
   472  docker ps -a
   473  history 
-  474  docker ps 
-  475  docker stop 3c0db6888734        
-  476  docker ps 
-  477  docker ps -a 
-  478  docker start 3c0db6888734        
-  479  docker ps 
-  480  docker attach 3c0db6888734
-  481  docker ps 
-  482  docker kill 3c0db6888734        
-  483  docker ps -a
-  484  docker start 3c0db6888734        
-  485  docker attach 3c0db6888734
-  486  uname -a 
-  487  docker run centos
-  488  docker run -it centos
-  489  docker  ps -l
-  490  docker  ps -lq
-  491  docker inspect $(docker  ps -lq)
-  492  docker ps 
-  493  docker run -itd centos
-  494  docker ps 
-  495  docker run -itd --name ppe-01 centos
-  496  docker ps 
-  497  docker run -itd --name ppe-02 centos
+  474  ls
+  475  cd my_git_projects/
+  476  ls
+  477  cd devops-niit-20190808/
+  478  ls
+  479  cd docker/
+  480  ls
+  481  mkdir dockerfile
+  482  mkdir -p dockerfile/myapache
+  483  cd dockerfile/myapache
+  484  lsx
+  485  ls
+  486  vim Dockerfile
+  487  ls
+  488  vim code.html
+  489  docker build -t testapache:v1 .
+  490  ls
+  491  docker images 
+  492  docker run -d -p 8099:80 testapache:v1
+  493  docker ps
+  494  ls
+  495  vim code.html 
+  496  docker build -t testapache:v2 .
+  497  docker run -d -p 8100:80 testapache:v2
   498  docker ps 
-  499  docker run -d --name ppe-03 centos
-  500  docker ps 
-  501  docker ps -a
-  502  docker inspect $(docker  ps -lq)
-  503  docker inspect ppe-02
-  504  docker kill ppe-02
-  505  docker run -itd --name ppe-04 centos
-  506  docker inspect ppe-04
-  507  docker run -itd --name ppe-05 centos
-  508  docker inspect ppe-05
-  509  history 
-  510  ls
-  511  cd my_git_projects/
-  512  ls
-  513  cd devops-niit-20190808/
-  514  ls
-  515  cd docker/
-  516  ls
-  517  history > Docker_hist.txt 
-  518  git add . ; git commit -m "Docker Hist"; git push origin master 
-  519  cd 
-  520  docker run -it ubuntu 
-  521  docker inspect 99a714365c30
-  522  curl 172.17.0.11
-  523  docker attach 99a714365c30
-  524  curl 172.17.0.11
-  525  docker attach 99a714365c30
-  526  curl 172.17.0.11
-  527  curl 172.17.0.11/info.html
-  528  ip addr 
-  529  docker ps 
-  530  docker commit -p -m  "My Apache Image" 99a714365c30  myapache:v1
-  531  docker images 
-  532  docker run -it myapache:v1 -p 8090:80 apache2ctl start
-  533  docker run -it myapache:v1 -p 8090:80 /usr/bin/apache2ctl start
-  534  docker attach 99a714365c30
-  535  docker commit -p -m  "My Apache Image" 99a714365c30  myapache:v2
-  536  docker run -itd myapache:v1 -p 8090:80 /bin/bash
-  537  docker run -itd -p 8090:80 myapache:v2 /bin/bash
-  538  docker ps 
-  539  iptables -L
-  540  histr
-  541  history 
-  542  netstat -tulnp 
-  543  docker run -itd myapache:v1 -p 8091:80 /bin/bash
-  544  docker run -itd myapache:v2 -p 8091:80 /bin/bash
-  545  docker run -itd myapache:v2 -p 8092:80 /bin/bash
-  546  hsit
-  547  docker run -itd -p 8095:80 myapache:v2 /bin/bash
-  548  docker run -itd -p 8096:80 myapache:v2 /bin/bash
-  549  docker run -itd -p 8097:80 myapache:v2 /bin/bash
-  550  ls
-  551  cd my_git_projects/
-  552  ls
-  553  cd devops-niit-20190808/
-  554  ls
-  555  cd docker/
-  556  ls
-  557  history > Docker_hist.txt 
+  499  docker kill f17837a52246        
+  500  ls
+  501  cd ..
+  502  ls
+  503  cd ..
+  504  ls
+  505  history > Docker_hist.txt 
