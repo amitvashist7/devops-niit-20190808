@@ -515,3 +515,43 @@
   515  cd docker/
   516  ls
   517  history > Docker_hist.txt 
+  518  git add . ; git commit -m "Docker Hist"; git push origin master 
+  519  cd 
+  520  docker run -it ubuntu 
+  521  docker inspect 99a714365c30
+  522  curl 172.17.0.11
+  523  docker attach 99a714365c30
+  524  curl 172.17.0.11
+  525  docker attach 99a714365c30
+  526  curl 172.17.0.11
+  527  curl 172.17.0.11/info.html
+  528  ip addr 
+  529  docker ps 
+  530  docker commit -p -m  "My Apache Image" 99a714365c30  myapache:v1
+  531  docker images 
+  532  docker run -it myapache:v1 -p 8090:80 apache2ctl start
+  533  docker run -it myapache:v1 -p 8090:80 /usr/bin/apache2ctl start
+  534  docker attach 99a714365c30
+  535  docker commit -p -m  "My Apache Image" 99a714365c30  myapache:v2
+  536  docker run -itd myapache:v1 -p 8090:80 /bin/bash
+  537  docker run -itd -p 8090:80 myapache:v2 /bin/bash
+  538  docker ps 
+  539  iptables -L
+  540  histr
+  541  history 
+  542  netstat -tulnp 
+  543  docker run -itd myapache:v1 -p 8091:80 /bin/bash
+  544  docker run -itd myapache:v2 -p 8091:80 /bin/bash
+  545  docker run -itd myapache:v2 -p 8092:80 /bin/bash
+  546  hsit
+  547  docker run -itd -p 8095:80 myapache:v2 /bin/bash
+  548  docker run -itd -p 8096:80 myapache:v2 /bin/bash
+  549  docker run -itd -p 8097:80 myapache:v2 /bin/bash
+  550  ls
+  551  cd my_git_projects/
+  552  ls
+  553  cd devops-niit-20190808/
+  554  ls
+  555  cd docker/
+  556  ls
+  557  history > Docker_hist.txt 
