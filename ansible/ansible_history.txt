@@ -1,0 +1,656 @@
+    1  apt-get update ; apt-get install git -y 
+    2  git --version
+    3  which  git 
+    4  ls
+    5  mkdir my_git_projects
+    6  ls
+    7  cd my_git_projects/
+    8  ls
+    9  git clone https://github.com/amitvashist7/devops-niit-20190808.git
+   10  ls
+   11  cd devops-niit-20190808/
+   12  ls
+   13  cat README.md 
+   14  vi README.md 
+   15  echo "Hello World" > Hello_World.txt
+   16  ls -ltr 
+   17  git add .
+   18  git status 
+   19  git log 
+   20  git commit -m "Added Hello World"
+   21  git config --global --edit
+   22  vi /root/.gitconfig
+   23  git log 
+   24  git push 
+   25  git log 
+   26  git push 
+   27  ls
+   28  history 
+   29  ls
+   30  history 
+   31  history > History.txt
+   32  git add . ; git commit -m "History"; git push origin master 
+   33  exit
+   34  pwd
+   35  ls
+   36  cd my_git_projects/
+   37  ls
+   38  cd devops-niit-20190808/
+   39  ls
+   40  git log 
+   41  ls
+   42  echo "Apple Pie" | git hash-object 
+   43  echo "Apple Pie" | git hash-object --stdin 
+   44  echo "Amit Vashist" | git hash-object --stdin 
+   45  echo "Apple Pie" | git hash-object --stdin 
+   46  echo "Apple Pie" | git hash-object --stdin -w
+   47  echo "Amit Vashist" | git hash-object --stdin -w
+   48  ls
+   49  ls -a
+   50  ls
+   51  cd .git/
+   52  ls -ltr 
+   53  cd objects/
+   54  ls
+   55  echo "Amit Vashist" | git hash-object --stdin -w
+   56  echo "Apple Pie" | git hash-object --stdin -w
+   57  ls
+   58  cd c4/
+   59  ls
+   60  cd ..
+   61  git cat-file c4/2fe628543c9f330ea51dea312d32cd72d7f454 -t 
+   62  git cat-file c42fe628543c9f330ea51dea312d32cd72d7f454 -t 
+   63  git cat-file c42fe628543c9f330ea51dea312d32cd72d7f454 -p
+   64  git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -p
+   65  cd ..
+   66  ls
+   67  cd ..
+   68  ls
+   69  git log 
+   70  git HEAD
+   71  ls
+   72  cd .git/
+   73  ls
+   74  file HEAD   
+   75  cat HEAD 
+   76  cat refs/heads/master
+   77  git log
+   78  cd ..
+   79  ls
+   80  history > History.txt 
+   81  git status 
+   82  git add . ; git commit -m "Update History" 
+   83  git log 
+   84  cat .git/refs/heads/master
+   85  git branch
+   86  history 
+   87  history > 1.txt
+   88  cat 1.txt 
+   89  ls
+   90  rm  -rf 1.txt 
+   91  ls
+   92  git staus 
+   93  git push 
+   94  ls
+   95  cd my_git_projects/
+   96  ls
+   97  cd devops-niit-20190808/
+   98  ls
+   99  ;s
+  100  ls
+  101  git rm Hello_World.txt
+  102  ls
+  103  git status 
+  104  git commit -m "File has been removed"
+  105  git status 
+  106  echo "Welcome to GIT Demo" > Demo.txt
+  107  git status 
+  108  git add . 
+  109  git status 
+  110  git commit -m "New Demo file"
+  111  git status 
+  112  git push 
+  113  ls
+  114  vi README.md 
+  115  git status 
+  116  git checkout README.md
+  117  git status 
+  118  cat README.md 
+  119  echo "Test - 02" >> README.md 
+  120  cat README.md 
+  121  ls
+  122  cd my_git_projects/
+  123  ls
+  124  cd devops-niit-20190808/
+  125  ls
+  126  git branch
+  127  git show HEAD
+  128  git branch -r 
+  129  ls
+  130  git branch
+  131  git branch dev
+  132  git branch test
+  133  git branch prod
+  134  git branch
+  135  ls
+  136  cd dev
+  137  git checkout dev
+  138  git branch
+  139  ls
+  140  echo "Welcome to Dev Branch" > Dev.txt
+  141  git add . 
+  142  git commit -m "First Commit| Dev Branch"
+  143  git log 
+  144  git checkout master
+  145  ls
+  146  git log 
+  147  git config --list 
+  148  git push origin dev
+  149  ls
+  150  git checkout dev
+  151  ls
+  152  git logs 
+  153  git log 
+  154  git log --graph 
+  155  git checkout master 
+  156  git log --graph 
+  157  ls
+  158  echo "Hello To Master" > master.txt
+  159  git add . ; git commit -m "Master Branch"; git push 
+  160  git log --graph 
+  161  ls
+  162  git checkout test
+  163  echo "Hello To Test" > test.txt
+  164  git add . ; git commit -m "Test Branch"; git push origin test
+  165  git checkout prod
+  166  echo "Hello To Prod" > prod.txt
+  167  git add . ; git commit -m "prod Branch"; git push origin prod
+  168  git log 
+  169  git log --graph
+  170  git log --oneline --graph
+  171  git checkout master 
+  172  git log --oneline --graph
+  173  git log --graph
+  174  git checkout test
+  175  git merge dev
+  176  ls
+  177  git log --graph
+  178  git checkout prod
+  179  git log --graph
+  180  ls
+  181  git merge test -m "Merge into Prod"
+  182  git log --graph
+  183  git checkout master 
+  184  ls -ltr 
+  185  git log --graph
+  186  git merge prod -m "Merge into Prod"
+  187  git log --graph
+  188  ls
+  189  git branch 
+  190  git checkout prod
+  191  ls
+  192  echo "Just a test" >> prod.txt 
+  193  git add . ; git commit -m "Just a test"; git push origin prod
+  194  git log --graph
+  195  git checkout master 
+  196  git push 
+  197  ls
+  198  history > History.txt 
+  199  git add . ; git commit -m "Just a test"; git push
+  200  wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war 
+  201  ls
+  202  java --version 
+  203  apt-get update ; apt-get install openjdk-8 -y 
+  204  apt-get update ; apt-get install openjdk-8-jdk -y 
+  205  java --version 
+  206  java -version 
+  207  ls
+  208  java -jar jenkins.war --httpPort=8081 &
+  209  netstat -tulnp
+  210  ls
+  211  netstat -tulnp
+  212  telnet localhost 8081
+  213  rm -rf .jenkins
+  214  java -jar jenkins.war --httpPort=8081 &
+  215  top
+  216  ps -ef | grep -i maven
+  217  free -m 
+  218  uptime
+  219  ps -ef | grep -i maven
+  220  ls
+  221  git clone https://github.com/amitvashist7/jenkins2-course-spring-petclinic.git
+  222  ls
+  223  cd jenkins2-course-spring-petclinic/
+  224  ls
+  225  cd 
+  226  telnet localhost 8088
+  227  telnet localhost 8080
+  228  netstat -tulnp 
+  229  ls
+  230  ps -ef | grep -i jenkins 
+  231  kill -9 2461  
+  232  ps -ef | grep -i jenkins 
+  233  netstat -tulnp 
+  234  curl localhost
+  235  curl localhost:8080
+  236  curl localhost:8080/home/
+  237  ps -ef | grep -i atmosphere
+  238  ls
+  239  cd jenkins2-course-spring-petclinic/
+  240  ls
+  241  mvn package 
+  242  ls
+  243  cd target/
+  244  ls
+  245  java -jar petclinic.war
+  246  java --version 
+  247  java -version 
+  248  ls
+  249  java -jar petclinic.war
+  250  cd ..
+  251  ls
+  252  mvn clean 
+  253  ls
+  254  mvn package
+  255  ls
+  256  cd target/
+  257  ls
+  258  cd spring-petclinic-4.2.6-SNAPSHOT/
+  259  ls
+  260  cd ..
+  261  ls
+  262  java -jar petclinic.war
+  263  ls
+  264  cd 
+  265  ls
+  266  cd my_git_projects/devops-niit-20190808/Jenkins/atmosphere/
+  267  ls
+  268  cd spring-boot-samples/spring-boot-sample-atmosphere/
+  269  ls
+  270  cd target/
+  271  ls
+  272  java -jar spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar 
+  273  init 0 
+  274  ls
+  275  java -jar jenkins.war --httpPort=8081 & 
+  276  shell
+  277  $Shell
+  278  echo $SHELL
+  279  amit
+  280  date
+  281  ls
+  282  cd my_git_projects/
+  283  ls
+  284  cd devops-niit-20190808/
+  285  ls
+  286  mkdir Git
+  287  mv * Git/
+  288  ls
+  289  mkdir Jenkins 
+  290  ls
+  291  cd 
+  292  ls
+  293  git clone Hello Shweta
+  294  As you are aware I’m down due to a throat infection since Friday but yesterday doctor discovered that I've got a viral fever due to which fever is on & off from last three days, the doctor has advised me to take a rest but still I’m imparting NIIT Session as agreed. 
+  295  Will update you real soon on the mentioned topic. 
+  296  BR,
+  297  Amit Kumar
+  298  git clone https://github.com/amitvashist7/devops-acc-29072019.git
+  299  ls
+  300  cp -rf devops-acc-29072019/atmosphere my_git_projects/devops-niit-20190808/Jenkins/
+  301  ls
+  302  cd my_git_projects/
+  303  ls
+  304  cd devops-niit-20190808/
+  305  ls
+  306  cd Jenkins/
+  307  ls
+  308  cd atmosphere/
+  309  ls
+  310  cd spring-boot-samples/spring-boot-sample-atmosphere/
+  311  ls -ltr 
+  312  rm -rf Dockerfile docker-compose.yaml 
+  313  ls
+  314  ls -R src/
+  315  ls
+  316  apt-get install maven -y 
+  317  mvn -version 
+  318  ls -ltr 
+  319  mvn compile
+  320  ls -ltr 
+  321  cd target/
+  322  cd ..
+  323  mvn test
+  324  ls
+  325  mvn package
+  326  ls
+  327  cd target/
+  328  ls
+  329  mvn package
+  330  mvn clean 
+  331  ls
+  332  cd ..
+  333  mvn clean 
+  334  mvn package
+  335  ls
+  336  cd target/
+  337  ls
+  338  java -jar spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar 
+  339  ls
+  340  java -jar spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar 
+  341  ls
+  342  java -jar spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar 
+  343  netstat -tulnp 
+  344  ls
+  345  netstat -tulnp 
+  346  iptables -L
+  347  iptables -F
+  348  ls
+  349  tail -f /var/log/syslog
+  350  ls
+  351  telnet localhost 8080
+  352  ps -ef | grep -i tomcat 
+  353  ps -ef | grep -i java 
+  354  ls
+  355  ps -ef | grep -i java 
+  356  ps -ef | grep -i tomcat 
+  357  java -version 
+  358  cd my_git_projects/
+  359  ls
+  360  cd devops-niit-20190808/Jenkins/atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/target/
+  361  ls
+  362  java -jar spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar 
+  363  ps -ef | grep -i java 
+  364  ls
+  365  scp -r spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar amitvashist7@demo02:/tmp
+  366  exit
+  367  cd - 
+  368  cd my_git_projects/devops-niit-20190808/Jenkins/atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/
+  369  ls
+  370  cd target/
+  371  ls
+  372  scp -r spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar amit@demo02:/tmp
+  373  scp -r spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar amit@10.128.15.201:/tmp
+  374  ls
+  375  java -version 
+  376  java -jar spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar 
+  377  ls
+  378  cd my_git_projects/
+  379  ls
+  380  cd devops-niit-20190808/
+  381  ls
+  382  cd 
+  383  ls
+  384  java -jar jenkins.war --httpPort=8081
+  385  java -jar jenkins.war --httpPort=8081 & 
+  386  ls
+  387  cd my_git_projects/
+  388  ls
+  389  cd devops-niit-20190808/
+  390  ls
+  391  cd Jenkins/
+  392  ls
+  393  cd atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/
+  394  ls
+  395  mvn clean 
+  396  ls
+  397  git add . ; git commit -m "Atmosphere Code" ; git push origin dev
+  398  ls
+  399  cd ..
+  400  ls
+  401  cd ..
+  402  ls
+  403  cd ..
+  404  ls
+  405  cd ..
+  406  ls
+  407  git add . ; git commit -m "Atmosphere Code" ; git push origin dev
+  408  ls
+  409  git branch
+  410  git add . ; git commit -m "Atmosphere Code" ; git push origin master 
+  411  git pull 
+  412  git add . ; git commit -m "Atmosphere Code" ; git push origin master 
+  413  cd 
+  414  ls
+  415  cd .jenkins/
+  416  ls
+  417  cd secrets/
+  418  ls
+  419  cd 
+  420  ls
+  421  pwd
+  422  cd .jenkins/
+  423  ls
+  424  cd workspace/
+  425  ls
+  426  cd atmosphere-pipeline
+  427  ls
+  428  cd Jenkins/atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/target/
+  429  ls
+  430  history 
+  431  mkdir docker
+  432  ls
+  433  cd docker/
+  434  ls
+  435  apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+  436  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  437  add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  438     $(lsb_release -cs) \
+  439     stable"
+  440  apt-get update; apt-get install docker-ce docker-ce-cli containerd.io
+  441  docker version 
+  442  cd
+  443  docker version 
+  444  ls
+  445  cd my_git_projects/devops-niit-20190808/
+  446  ls
+  447  cd docker/
+  448  history > Docker_hist.txt
+  449  git add . ; git commit -m "Docker History"; git push origin master
+  450  cd
+  451  docker version 
+  452  docker run ubuntu echo "Welcome to the world of Docker"
+  453  docker ps 
+  454  docker ps -a
+  455  docker run ubuntu echo "Hello NIIT"
+  456  docker ps 
+  457  docker ps -a
+  458  docker images 
+  459  docker run centos echo "Hello Test - 2"
+  460  docker run centos echo "Hello Test - 3"
+  461  docker ps 
+  462  docker ps -a
+  463  docker images
+  464  cat /etc/*-release
+  465  docker run -it ubuntu /bin/bash
+  466  docker ps 
+  467  docker ps -a
+  468  docker run -it centos /bin/bash
+  469  docker ps 
+  470  docker ps -a
+  471  docker rm d91f3a8926c2       
+  472  docker ps -a
+  473  history 
+  474  ls
+  475  cd my_git_projects/
+  476  ls
+  477  cd devops-niit-20190808/
+  478  ls
+  479  git add . ; git commit -m "DockerFile"; git push origin master 
+  480  ls
+  481  cd my_git_projects/
+  482  ls
+  483  cd devops-niit-20190808/
+  484  ls
+  485  cd docker/
+  486  ls
+  487  mkdir dockerfile
+  488  mkdir -p dockerfile/myapache
+  489  cd dockerfile/myapache
+  490  lsx
+  491  ls
+  492  vim Dockerfile
+  493  ls
+  494  vim code.html
+  495  docker build -t testapache:v1 .
+  496  ls
+  497  docker images 
+  498  docker run -d -p 8099:80 testapache:v1
+  499  docker ps
+  500  ls
+  501  vim code.html 
+  502  docker build -t testapache:v2 .
+  503  docker run -d -p 8100:80 testapache:v2
+  504  docker ps 
+  505  docker kill f17837a52246        
+  506  ls
+  507  cd ..
+  508  ls
+  509  cd ..
+  510  ls
+  511  history > Docker_hist.txt 
+  512  git add . ; git commit -m "Docker History"; git push origin master 
+  513  docker ps 
+  514  cd 
+  515  docker attach 99a714365c30        
+  516  docker ps 
+  517  docker stop 3c0db6888734        
+  518  docker ps 
+  519  docker ps -a 
+  520  docker start 3c0db6888734        
+  521  docker ps 
+  522  docker attach 3c0db6888734
+  523  docker ps 
+  524  docker kill 3c0db6888734        
+  525  docker ps -a
+  526  docker start 3c0db6888734        
+  527  docker attach 3c0db6888734
+  528  uname -a 
+  529  docker run centos
+  530  docker run -it centos
+  531  docker  ps -l
+  532  docker  ps -lq
+  533  docker inspect $(docker  ps -lq)
+  534  docker ps 
+  535  docker run -itd centos
+  536  docker ps 
+  537  docker run -itd --name ppe-01 centos
+  538  docker ps 
+  539  docker run -itd --name ppe-02 centos
+  540  docker ps 
+  541  docker run -d --name ppe-03 centos
+  542  docker ps 
+  543  docker ps -a
+  544  docker inspect $(docker  ps -lq)
+  545  docker inspect ppe-02
+  546  docker kill ppe-02
+  547  docker run -itd --name ppe-04 centos
+  548  docker inspect ppe-04
+  549  docker run -itd --name ppe-05 centos
+  550  docker inspect ppe-05
+  551  history 
+  552  ls
+  553  cd my_git_projects/
+  554  ls
+  555  cd devops-niit-20190808/
+  556  ls
+  557  cd docker/
+  558  ls
+  559  history > Docker_hist.txt 
+  560  git add . ; git commit -m "Docker Hist"; git push origin master 
+  561  cd 
+  562  docker run -it ubuntu 
+  563  docker inspect 99a714365c30
+  564  curl 172.17.0.11
+  565  docker attach 99a714365c30
+  566  curl 172.17.0.11
+  567  docker attach 99a714365c30
+  568  curl 172.17.0.11
+  569  curl 172.17.0.11/info.html
+  570  ip addr 
+  571  docker ps 
+  572  docker commit -p -m  "My Apache Image" 99a714365c30  myapache:v1
+  573  docker images 
+  574  docker run -it myapache:v1 -p 8090:80 apache2ctl start
+  575  docker run -it myapache:v1 -p 8090:80 /usr/bin/apache2ctl start
+  576  docker attach 99a714365c30
+  577  docker commit -p -m  "My Apache Image" 99a714365c30  myapache:v2
+  578  docker run -itd myapache:v1 -p 8090:80 /bin/bash
+  579  docker run -itd -p 8090:80 myapache:v2 /bin/bash
+  580  docker ps 
+  581  iptables -L
+  582  histr
+  583  history 
+  584  netstat -tulnp 
+  585  docker run -itd myapache:v1 -p 8091:80 /bin/bash
+  586  docker run -itd myapache:v2 -p 8091:80 /bin/bash
+  587  docker run -itd myapache:v2 -p 8092:80 /bin/bash
+  588  hsit
+  589  docker run -itd -p 8095:80 myapache:v2 /bin/bash
+  590  docker run -itd -p 8096:80 myapache:v2 /bin/bash
+  591  docker run -itd -p 8097:80 myapache:v2 /bin/bash
+  592  ls
+  593  cd my_git_projects/
+  594  ls
+  595  cd devops-niit-20190808/
+  596  ls
+  597  cd docker/
+  598  ls
+  599  history > Docker_hist.txt 
+  600  git add . ; git commit -m "Docker History 2"; git push origin master
+  601  exit
+  602  ls
+  603  cd devops-acc-29072019/
+  604  ls
+  605  cd ..
+  606  cd my_git_projects/
+  607  ls
+  608  cd devops-niit-20190808/
+  609  ls
+  610  cd ansible/
+  611  ls
+  612  cd demo1/
+  613  ls
+  614  ansible -i inventory -m ping-u root -k 
+  615  ls
+  616  ansible all -i inventory -m ping-u root -k 
+  617  cat inventory 
+  618  ansible all -i inventory -m ping -u root -k 
+  619  ls
+  620  cd ..
+  621  ls
+  622  cp -rf demo1 demo2
+  623  ls
+  624  cd demo2/
+  625  ls
+  626  cat inventory 
+  627  vi inventory 
+  628  ansible all -i inventory -m ping -u root -k 
+  629  ansible web -i inventory -m ping -u root -k 
+  630  ansible ansible -i inventory -m ping -u root -k 
+  631  hostname
+  632  ssh root@demo01
+  633  ssh root@demo02
+  634  ls
+  635  vim inventory 
+  636  ansible ansible -i inventory -m ping -u root -k 
+  637  ansible web -i inventory -m ping -u root -k 
+  638  ls
+  639  vim inventory 
+  640  ansible web -i inventory -m ping -u root -k 
+  641  ansible db -i inventory -m ping -u root -k 
+  642  ansible web:db -i inventory -m ping -u root -k 
+  643  ansible 'web:&db' -i inventory -m ping -u root -k 
+  644  vim inventory 
+  645  ansible 'web:&db' -i inventory -m ping -u root -k 
+  646  ansible 'web:&db:!ansible' -i inventory -m ping -u root -k 
+  647  vim inventory 
+  648  ansible 'dc' -i inventory -m ping -u root -k 
+  649  vim inventory 
+  650  ansible 'dc' -i inventory -m ping
+  651  ls
+  652  cd ..
+  653  ls
+  654  cd ansible/
+  655  ls
+  656  history > ansible_history.txt
